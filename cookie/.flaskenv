@@ -1,0 +1,4 @@
+FLASK_ENV=development
+FLASK_RUN_PORT=8001
+# 1：开启；0：关闭
+FLASK_DEBUG=1
