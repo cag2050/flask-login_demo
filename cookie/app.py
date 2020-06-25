@@ -9,7 +9,9 @@ app.secret_key = 'secret string'
 login_manager = LoginManager()
 # 在程序包的工厂函数中对login_manager对象调用init_app()方法进行初始化扩展
 login_manager.init_app(app)
-
+# 默认情况下，当未登录的用户尝试访问一个 login_required 装饰的视图，Flask-Login 会闪现一条消息并且重定向到登录视图。
+# (如果未设置登录视图，它将会以 401 错误退出。)
+# 也可以指定跳转到的视图函数
 login_manager.login_view = 'need_login'
 login_manager.login_message_category = 'warning'
 

@@ -8,8 +8,10 @@ db = SqliteDatabase('/Users/chenag/Documents/PycharmProjects/flask-login_demo' +
 class Admin(Model, UserMixin):
     class Meta:
         database = db
+
     id = AutoField()
     name = CharField()
+
 
 db.connect()
 db.create_tables([Admin])
